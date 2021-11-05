@@ -1,0 +1,21 @@
+
+        <div class="card mt-4">
+            <div class="card-body">
+               <div class="raw">
+                <div class="col-lg">
+                    <form [formGroup]="form" (ngSubmit)="buscarimg()">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Buscar una imagen" formControlName="imagenName" >
+                        <button type="submit" class="btn btn-primary">BUSCAR</button>
+                       
+                      </div>
+                    </form>
+                 </div>
+               
+               </div>
+            <select [(ngModel)]="seleccion" style="margin-top: 2px;" (change)=cambio()>
+                <label >Filtro</label><option *ngFor="let item of listcategoria">{{ item.categoria }}</option>
+                 </select>
+            </div>
+        </div>
+   
